@@ -11,6 +11,7 @@ all:
           destination: /js/optimized.js   # destination path for optimized .js file
           timestamp: true                 # add a timestamp to the combined file url
           files: []                       # list of js files to optimize and combine
+          position: first		  # the position in the list to insert the optimized file
       stylesheet:                         # stylesheets configuration section
         enabled: false                    # status of optimization
         class: npOptimizerStylesheet      # the stylesheet optimizer class to use
@@ -19,6 +20,7 @@ all:
           destination: /css/optimized.css # destination path for optimized .css file
           timestamp: true                 # add a timestamp to the combined file url
           files: []                       # list of css files to optimize and combine
+          position: first		  # the position in the list to insert the optimized file
       png_image:                          # PNG images configuration section
         enabled: false                    # status of optimization
         class: npOptimizerPngImage        # the PNG image optimizer class to use
