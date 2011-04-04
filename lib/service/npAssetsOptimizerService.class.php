@@ -25,6 +25,7 @@ class npAssetsOptimizerService
           'driver' => 'JSMin',
           'files' => array(),
           'destination' => '/js/optimized.js',
+          'position' => 'first'
         ),
       ),
       'stylesheet' => array(
@@ -34,6 +35,7 @@ class npAssetsOptimizerService
           'driver' => 'Cssmin',
           'files' => array(),
           'destination' => '/css/optimized.css',
+          'position' => 'first'
         ),
       ),
     ),
@@ -118,7 +120,7 @@ class npAssetsOptimizerService
       $response->removeJavascript($file);
     }
     
-    $response->addJavascript($javascriptOptimizer->getOptimizedFileWebPath(), 'first');
+    $response->addJavascript($javascriptOptimizer->getOptimizedFileWebPath(), $this->configuration['javascript']['params']['position']);
   }
   
   /**
@@ -139,7 +141,7 @@ class npAssetsOptimizerService
       $response->removeStylesheet($file);
     }
     
-    $response->addStylesheet($stylesheetOptimizer->getOptimizedFileWebPath(), 'first');
+    $response->addStylesheet($stylesheetOptimizer->getOptimizedFileWebPath(), $this->configuration['stylesheet']['params']['position']);
   }
   
   /**

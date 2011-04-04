@@ -83,6 +83,7 @@ Basic configuration of assets optimization is done in the `np_assets_optimizer_p
                 - jquery.js
                 - jquery-ui.js
                 - application.js
+              position: first		           # the position in the list to insert the optimized file (first or last)
           stylesheet:                          # stylesheets configuration section
             enabled: false                     # status of optimization
             class: npOptimizerStylesheet       # the stylesheet optimizer class to use
@@ -94,6 +95,7 @@ Basic configuration of assets optimization is done in the `np_assets_optimizer_p
                 - /facebox/facebox.css
                 - main
                 - skins/foo.css
+              position: first		           # the position in the list to insert the optimized file (first or last)
           png_image:                           # PNG images configuration section
             enabled: false                     # status of optimization
             class: npOptimizerPngImage         # the PNG image optimizer class to use
